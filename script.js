@@ -1,5 +1,7 @@
 let list = document.getElementsByTagName('ul')[0];
-let newFood = document.getElementById('newFoodInput');
+
+const newFood = document.getElementById('newFoodInput');
+let foodName = newFood;
 
 // let addNewItem = document.createElement('li');
 // let newItemText = document.createTextNode('onions');
@@ -19,8 +21,5 @@ handlers = {
   deleteButton.setAttribute('id', 'l' + (document.querySelectorAll('li').length))
   list.appendChild(deleteButton);
   },
-  deleteFoodItem: function(position){
-    this.list.splice(position, 1);
-  }
-}
 
+}
