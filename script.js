@@ -13,6 +13,14 @@ handlers = {
   let newItemText = document.createTextNode(newFood.value);
   addNewItem.appendChild(newItemText);
   list.appendChild(addNewItem);
+  let deleteButton = document.createElement('button');
+  let buttonText = document.createTextNode('Delete');
+  deleteButton.appendChild(buttonText);
+  deleteButton.setAttribute('id', 'l' + (document.querySelectorAll('li').length))
+  list.appendChild(deleteButton);
   },
+  deleteFoodItem: function(position){
+    this.list.splice(position, 1);
+  }
 }
 
